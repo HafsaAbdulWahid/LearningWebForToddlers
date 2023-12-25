@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --primaryColor: #7ebc12;
+    --blackColor: rgb(46, 46, 71);
+    --borderColor: rgb(46, 46, 71);
+    --inputColor: rgb(241, 241, 241);
+    --successColor: rgb(205, 237, 207);
+    --failureColor: rgb(255, 0, 0);
+}
+
+html {
+    font-size: 90%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #7ebc12 !important;
+}
+
+.form-container{
+    width: 22%;
+    height: 430px;
+    column-gap: 30px;
+    margin: auto;
+    overflow: hidden;
+    background: #e8e7e7 !important;
+}
+
+.register-container {
+    width: 22%;
+    column-gap: 30px;
+    margin: auto;
+    overflow: hidden;
+    background: #e8e7e7 !important;
+    height: 600px;
+    padding: 1rem;
+    padding-top: 25px;
+    margin: auto;
+}
+
+
+.titleDiv {
+    position: relative;
+    width: 100%;
+    margin: 35px auto 5px;
+    transform: translateY(-3rem);
+    z-index: 1000;
+}
+
+.subTitle {
+  font-weight: bold;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.rows {
+    display: grid;
+    position: relative;
+    gap: 1rem;
+    z-index: 1000;
+    transform: translateY(-1rem);
+    padding-bottom: 1rem;
+}
+
+label {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    background: var(--inputColor);
+    border: none;
+    outline: none;
+    color: var(--blackColor);
+    font-weight: 500;
+    padding: .5rem;
+    border-radius: 3px;
+}
+
+::placeholder {
+    font-size: 12px;
+}
+
+#submitBtn {
+    background-color: #fa1919;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    margin-top: 8px;
+}
+
+#submitBtn:hover {
+    background-color: #ff0f10;
+    color: white;
+}
+
+.registerLink {
+    display: block;
+    font-size: 13px;
+    color: var(--blackColor);
+    text-align: center;
+    font-weight: 500;
+    padding-top: 15px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dashboard {
+    text-align: center;
+}
+
+.dashboard h1 {
+    font-size: 5rem;
+    color: var(--primaryColor);
+    margin: 1rem 0;
+}
+
+.logOutBtn {
+    cursor: pointer;
+}
+
+.logOutBtn:hover a {
+    background: var(--secondaryColor);
+    color: var(--blackColor);
+}
+
+.logOutBtn a {
+    padding: 10px 20px;
+    color: white;
+    background: var(--blackColor);
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+    .dashboard h1 {
+        font-size: 5rem;
+    }
+}
+
+.success {
+    text-align: center;
+    padding: 10px 20px;
+    background: var(--successColor);
+    color: var(--blackColor);
+    margin-bottom: 1rem;
+}
+
+.fail {
+    position: relative;
+    z-index: 1000;
+    color: var(--failureColor);
+    top: -7%;
+}
